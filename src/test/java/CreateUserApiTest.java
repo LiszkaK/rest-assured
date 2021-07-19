@@ -40,7 +40,7 @@ public class CreateUserApiTest implements Resources {
                 .body(createUserJson.getJsonObject())
                 .header("Authorization", API_ACCESS_TOKEN)
         .when()
-                .post(USERS_ROUTE)
+                .post(USERS_RESOURCE)
         .then()
                 .body("code", equalTo(201))
                 .body("data.name", equalTo(createUserJson.getName()))
